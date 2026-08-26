@@ -1,0 +1,163 @@
+:root {
+
+  --color-brand: #48ff00;
+  --color-brand-soft: #E5F0FF;
+
+  --color-text: #1E293B;
+  --color-muted: #64748B;
+  --color-surface: #ffffff;
+  --color-bg: #F1F5F9;
+  --radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Sarabun", system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px 16px;
+  line-height: 1.6;
+}
+
+.card {
+  background-color: var(--color-surface);
+  width: 100%;
+  max-width: 380px;
+  padding: 36px 32px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 12px 40px -8px rgba(0, 50, 100, 0.08), 0 4px 12px -4px rgba(0, 50, 100, 0.04);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px -12px rgba(0, 50, 100, 0.12), 0 8px 16px -4px rgba(0, 50, 100, 0.06);
+}
+
+.card__avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF7B00, #FF5E00);
+  box-shadow: 0 8px 24px -6px rgba(255, 94, 0, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card__name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card__tagline {
+  color: var(--color-muted);
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.card__divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0;
+}
+
+.card__info {
+  text-align: left;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row dt {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.info-row dd {
+  font-weight: 600;
+}
+
+.card__subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin: 20px 0 12px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-list li {
+  background-color: var(--color-brand-soft);
+  color: #0047AB;
+  /* Deep Blue text for better contrast on light blue */
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.skill-list li:hover {
+  background-color: #ffffff;
+  border-color: #0047AB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 71, 171, 0.1);
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--color-brand);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.card__link:hover {
+  border-bottom-color: var(--color-brand);
+}
+
+/* ===== แก้ไขจุดที่ 12 : เปลี่ยนสีข้อความใน footer ให้ต่างจากเดิม ===== */
+.page-footer {
+  color: #0047AB;
+  /* Deep Blue to match the theme */
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
